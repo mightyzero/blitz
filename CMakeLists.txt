@@ -28,8 +28,8 @@ if (DOXYGEN_FOUND)
 		${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in
 		${CMAKE_BINARY_DIR}/Doxyfile @ONLY)
 
-	# Add the make docs target
-	add_custom_target(docs
+	# Add custom target to generate documentation
+	add_custom_target(blitz-docs
 		${DOXYGEN_EXECUTABLE} ${CMAKE_BINARY_DIR}/Doxyfile
 		WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
 		COMMENT "Generating API documentation with Doxygen" VERBATIM)
